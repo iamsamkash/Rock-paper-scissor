@@ -1,0 +1,21 @@
+#container{
+    border: 2px solid black;
+    text-align: center;
+    
+
+}
+#btnn{
+
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 5px;
+    flex-wrap: wrap;
+}
+h1{
+    font-size: px;
+}
+#resultbox{
+    border: 2px solid red;
+}

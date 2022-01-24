@@ -45,12 +45,20 @@ function rpsgame(yourchoice){
     console.log(message)
     rpsfrontend(yourchoice.id, botchoice, message);
 }
+
+// random no code
+
 function ranbotrps() {
     return Math.floor(Math.random()*3);
 }
+
+// bot choice random
+
 function notochoice(number){
     return ['rock','paper','scissor'][number]
 }
+
+
 function deciderWinner(yourchoice, computerchoice)
 {
     var rpsdatabase={
@@ -64,6 +72,8 @@ function deciderWinner(yourchoice, computerchoice)
 
     return [yourScore, computerScore]
 }
+
+
 function finalmessage([yourScore, computerScore])
 {
     if(yourScore===0) {
@@ -77,6 +87,8 @@ function finalmessage([yourScore, computerScore])
         return {'message': "You Won ", 'color': 'Green'}
     }
 }
+
+
  function rpsfrontend(humanimgchoice, botimgchoice, finalmessage)
  {
      var imagesdatabase ={
@@ -85,20 +97,30 @@ function finalmessage([yourScore, computerScore])
          'scissor': document.getElementById('scissor').src,
      }
      //  image remove
-    document.getElementById('rock').remove(); 
-    document.getElementById('paper').remove(); 
-    document.getElementById('scissor').remove(); 
-    document.getElementById('mains').remove(); 
+    
+    // document.getElementById('rock').remove(); 
+    // document.getElementById('paper').remove(); 
+    // document.getElementById('scissor').remove(); 
+    // document.getElementById('mains').remove(); 
 
+    // div remove (image remove and div remove both works perfectly)
+
+    document.getElementById('content1').remove();
+    document.getElementById('content2').remove();
+    document.getElementById('content3').remove();
     var humandiv = document.createElement('div');
-    var botdiv = document.createElement('div');
     var messagediv = document.createElement('div');
+    var botdiv = document.createElement('div');
+   
+    // given the div's there inhtml code
     
     botdiv.innerHTML = "<img src='" + imagesdatabase[botimgchoice] + "' style=' box-shadow: 5px 6px 5px red;' >"
-    messagediv.innerHTML = "<h1 style='color:" + finalmessage['color'] + "; fontsize: 60px; padding;25px;'>" +finalmessage['message'] +"</h1>"
+    messagediv.innerHTML = "<h1 style='color:" + finalmessage['color'] + "; font-size: 60px; padding: 70px; text-align: center;'>" +finalmessage['message'] +"</h1>"
     humandiv.innerHTML = "<img src='" + imagesdatabase[humanimgchoice] + "' style=' box-shadow: 5px 6px 5px green;' >"
     
+    // this is the form in which the result is announced
+
     document.getElementById('main').appendChild(humandiv)
-    document.getElementById('main').appendChild(botdiv)
     document.getElementById('main').appendChild(messagediv)
+    document.getElementById('main').appendChild(botdiv)
     }
