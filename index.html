@@ -14,20 +14,23 @@
     <div class="container">
         <h1>Rock Paper Scissors Game</h1>
         <div class="btn">
-            <div><button class="btns btn-success" onclick="play()">Play</button> </div>
+            <div><button class="btns btn-success" onclick="play()"> <a href="#content3">Play</a></button> </div>
             <div><button class="btns btn-danger" onclick="exit()">Exit</button> </div>
             <div><button class="btns btn-info" onclick="i()">i</button> </div>
-            <div><button class="btns btn-primary" onclick="reload()">Reset</button>
-            </div>
+            <!-- <div><button class="btns btn-primary" onclick="reload()">Reset</button> -->
+
         </div>
         <div id="mains">
             <h3>Choose any one</h3>
         </div>
         <div id="main">
-            
-            <div id="content1" class="content"><img onclick="rpsgame(this)" id="rock"src="img/rock.jpg" alt="Rock"></div>
-            <div id="content2" class="content"><img onclick="rpsgame(this)" id="paper"src="img/paper.jpg" alt="paper"></div>
-            <div id="content3" class="content"><img onclick="rpsgame(this)" id="scissor"  src="img/scissors.jpg" alt="scissor"></div>
+
+            <div id="content1" class="content"><a href="#re"><img onclick="rpsgame(this)" id="rock" src="img/rock.jpg"
+                        alt="Rock"></a></div>
+            <div id="content2" class="content"><a href="#re"><img onclick="rpsgame(this)" id="paper" src="img/paper.jpg"
+                        alt="paper"></a></div>
+            <div id="content3" class="content"><a href="#re"><img onclick="rpsgame(this)" id="scissor"
+                        src="img/scissors.jpg" alt="scissor"></a></div>
         </div>
     </div>
     <div id="htp">
@@ -40,7 +43,8 @@
         <p> 3:- Rock wins against scissors; paper wins against rock; and scissors wins against paper.
         </p>
         <p>Note:- Computer will be of red color.</p>
-        </div>
+    </div>
+    <footer id="footer">Developed by <a href="https://github.com/samarthkashyap-1">Samarth Kashyap</a></footer>
     <script src="app.js"></script>
 </body>
 

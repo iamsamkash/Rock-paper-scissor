@@ -2,6 +2,7 @@ function reload()
 {
     location.reload();
 }
+
 function play() {
     document.getElementById("main").style.display = ('flex');
     document.getElementById("mains").style.display = ('block');
@@ -111,9 +112,10 @@ function finalmessage([yourScore, computerScore])
     var humandiv = document.createElement('div');
     var messagediv = document.createElement('div');
     var botdiv = document.createElement('div');
-   
+    var rebut = document.createElement('div');
+
     // given the div's there inhtml code
-    
+    rebut.innerHTML = '<button id="re" class="btns btn-primary" onclick="reload()">Reset</button>'
     botdiv.innerHTML = "<img src='" + imagesdatabase[botimgchoice] + "' style=' box-shadow: 5px 6px 5px red;' >"
     messagediv.innerHTML = "<h1 style='color:" + finalmessage['color'] + "; font-size: 60px; padding: 70px; text-align: center;'>" +finalmessage['message'] +"</h1>"
     humandiv.innerHTML = "<img src='" + imagesdatabase[humanimgchoice] + "' style=' box-shadow: 5px 6px 5px green;' >"
@@ -123,4 +125,5 @@ function finalmessage([yourScore, computerScore])
     document.getElementById('main').appendChild(humandiv)
     document.getElementById('main').appendChild(messagediv)
     document.getElementById('main').appendChild(botdiv)
+    document.getElementById('main').appendChild(rebut)
     }

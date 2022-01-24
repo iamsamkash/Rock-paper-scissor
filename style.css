@@ -1,3 +1,6 @@
+*{
+    scroll-behavior: smooth;
+}
 .container {
     text-align: center;
     box-shadow: 10px 10px 8px black;
@@ -52,10 +55,33 @@
     padding: 15px;
     align-items: center;
     border: 2px solid rgb(255, 113, 113);
+    border-radius: 6px;
+    box-shadow:8px 8px 7px 5px rgb(255, 113, 113);
     
 }
 h5{
     font-size: 25px;
+}
+#footer{
+    position: fixed;
+    bottom: 0%;
+    text-align: center;
+    padding: 5px;
+    font-size: 15px;
+    color: white;
+    background-color: black;
+    width: 100%;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    text-decoration: none;
+    color: white;
+}
+#re{
+    margin-top: 20px;
 }
 @media only screen and (max-width: 500px) {
    
@@ -80,5 +106,7 @@ img {
     margin: auto;
     padding: 10px 0px; 
 }
-
+#htp{
+    right: 20%;
+}
 }
